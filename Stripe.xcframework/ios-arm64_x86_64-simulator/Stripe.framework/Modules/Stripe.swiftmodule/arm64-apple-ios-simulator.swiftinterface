@@ -1,0 +1,83 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Stripe
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import DeveloperToolsSupport
+import Foundation
+import ObjectiveC
+import PassKit
+@_exported import Stripe
+@_exported import StripeApplePay
+@_exported import StripeCore
+@_exported import StripePayments
+@_exported import StripePaymentsUI
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public protocol STPApplePayContextDelegate : StripeApplePay._stpinternal_STPApplePayContextDelegateBase {
+  @objc(applePayContext:didCreatePaymentMethod:paymentInformation:completion:) func applePayContext(_ context: StripeApplePay.STPApplePayContext, didCreatePaymentMethod paymentMethod: StripePayments.STPPaymentMethod, paymentInformation: PassKit.PKPayment, completion: @escaping StripeApplePay.STPIntentClientSecretCompletionBlock)
+  @objc(applePayContext:didCompleteWithStatus:error:) func applePayContext(_ context: StripeApplePay.STPApplePayContext, didCompleteWith status: StripePayments.STPPaymentStatus, error: (any Swift.Error)?)
+}
+@objc public protocol STPCustomerEphemeralKeyProvider : ObjectiveC.NSObjectProtocol {
+  @objc(createCustomerKeyWithAPIVersion:completion:) func createCustomerKey(withAPIVersion apiVersion: Swift.String, completion: @escaping StripePayments.STPJSONResponseCompletionBlock)
+}
+@objc public protocol STPIssuingCardEphemeralKeyProvider : ObjectiveC.NSObjectProtocol {
+  @objc(createIssuingCardKeyWithAPIVersion:completion:) func createIssuingCardKey(withAPIVersion apiVersion: Swift.String, completion: @escaping StripePayments.STPJSONResponseCompletionBlock)
+}
+@available(*, deprecated, message: "use `STPCustomerEphemeralKeyProvider` or `STPIssuingCardEphemeralKeyProvider` depending on the type of key that will be fetched.")
+@objc public protocol STPEphemeralKeyProvider : Stripe.STPCustomerEphemeralKeyProvider {
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class STPFakeAddPaymentPassViewController : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) public class func canAddPaymentPass() -> Swift.Bool
+  @objc(initWithRequestConfiguration:delegate:) @_Concurrency.MainActor(unsafe) required public init?(requestConfiguration configuration: PassKit.PKAddPaymentPassRequestConfiguration, delegate: (any PassKit.PKAddPaymentPassViewControllerDelegate)?)
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: (any PassKit.PKAddPaymentPassViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc convenience override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required convenience dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @objc deinit
+}
+@objc @available(iOS, deprecated: 100000.0, message: "Please use Issuing Elements instead: https://stripe.com/docs/issuing/elements")
+public class STPPinManagementService : ObjectiveC.NSObject {
+  public var apiClient: StripeCore.STPAPIClient
+  @objc public init(keyProvider: any Stripe.STPIssuingCardEphemeralKeyProvider)
+  @objc public func retrievePin(_ cardId: Swift.String, verificationId: Swift.String, oneTimeCode: Swift.String, completion: @escaping StripePayments.STPPinCompletionBlock)
+  @objc public func updatePin(_ cardId: Swift.String, newPin: Swift.String, verificationId: Swift.String, oneTimeCode: Swift.String, completion: @escaping StripePayments.STPPinCompletionBlock)
+  @objc deinit
+}
+@objc public class STPPushProvisioningContext : ObjectiveC.NSObject {
+  public var apiClient: StripeCore.STPAPIClient
+  @available(*, deprecated, renamed: "requestConfiguration(withName:description:last4:brand:primaryAccountIdentifier:)", message: "Use `requestConfiguration(withName:description:last4:brand:primaryAccountIdentifier:)` instead.")
+  @objc public class func requestConfiguration(withName name: Swift.String, description: Swift.String?, last4: Swift.String?, brand: StripePayments.STPCardBrand) -> PassKit.PKAddPaymentPassRequestConfiguration
+  @objc public class func requestConfiguration(withName name: Swift.String, description: Swift.String?, last4: Swift.String?, brand: StripePayments.STPCardBrand, primaryAccountIdentifier: Swift.String?) -> PassKit.PKAddPaymentPassRequestConfiguration
+  @objc public init(keyProvider: any Stripe.STPIssuingCardEphemeralKeyProvider)
+  @objc public func addPaymentPassViewController(_ controller: PassKit.PKAddPaymentPassViewController, generateRequestWithCertificateChain certificates: [Foundation.Data], nonce: Foundation.Data, nonceSignature: Foundation.Data, completionHandler handler: @escaping (PassKit.PKAddPaymentPassRequest) -> Swift.Void)
+  @objc deinit
+}
+@objc public class STPPushProvisioningDetailsParams : ObjectiveC.NSObject {
+  @objc public var cardId: Swift.String {
+    get
+  }
+  @objc public var certificates: [Foundation.Data] {
+    get
+  }
+  @objc public var nonce: Foundation.Data {
+    get
+  }
+  @objc public var nonceSignature: Foundation.Data {
+    get
+  }
+  @objc public var certificatesBase64: [Swift.String] {
+    @objc get
+  }
+  @objc public var nonceHex: Swift.String {
+    @objc get
+  }
+  @objc public var nonceSignatureHex: Swift.String {
+    @objc get
+  }
+  @objc required public init(cardId: Swift.String, certificates: [Foundation.Data], nonce: Foundation.Data, nonceSignature: Foundation.Data)
+  @objc deinit
+}
