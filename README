@@ -1,0 +1,1 @@
+A stupid wrapper @objc wrapper around the some StripePaymentSheet APIs, to make them work with Kotlin Multiplatform (Used in https://github.com/k1rak1ra/KotlinMultiplatformStripe)

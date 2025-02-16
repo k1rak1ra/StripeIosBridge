@@ -6,7 +6,72 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E5A3C6B12D5EE93F00ACCABD /* Stripe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6522D5EA01E00ACCABD /* Stripe.xcframework */; };
+		E5A3C6B22D5EE93F00ACCABD /* Stripe.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6522D5EA01E00ACCABD /* Stripe.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6B42D5EE94400ACCABD /* Stripe3DS2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6532D5EA01E00ACCABD /* Stripe3DS2.xcframework */; };
+		E5A3C6B52D5EE94400ACCABD /* Stripe3DS2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6532D5EA01E00ACCABD /* Stripe3DS2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6B62D5EE94500ACCABD /* StripeApplePay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6542D5EA01E00ACCABD /* StripeApplePay.xcframework */; };
+		E5A3C6B72D5EE94500ACCABD /* StripeApplePay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6542D5EA01E00ACCABD /* StripeApplePay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6B82D5EE94600ACCABD /* StripeCameraCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6552D5EA01E00ACCABD /* StripeCameraCore.xcframework */; };
+		E5A3C6B92D5EE94600ACCABD /* StripeCameraCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6552D5EA01E00ACCABD /* StripeCameraCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6BA2D5EE94800ACCABD /* StripeCardScan.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6562D5EA01E00ACCABD /* StripeCardScan.xcframework */; };
+		E5A3C6BB2D5EE94800ACCABD /* StripeCardScan.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6562D5EA01E00ACCABD /* StripeCardScan.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6BC2D5EE94900ACCABD /* StripeCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6572D5EA01E00ACCABD /* StripeCore.xcframework */; };
+		E5A3C6BD2D5EE94900ACCABD /* StripeCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6572D5EA01E00ACCABD /* StripeCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6BE2D5EE94A00ACCABD /* StripeFinancialConnections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6582D5EA01E00ACCABD /* StripeFinancialConnections.xcframework */; };
+		E5A3C6BF2D5EE94A00ACCABD /* StripeFinancialConnections.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6582D5EA01E00ACCABD /* StripeFinancialConnections.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6C02D5EE94B00ACCABD /* StripeIdentity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6592D5EA01E00ACCABD /* StripeIdentity.xcframework */; };
+		E5A3C6C12D5EE94B00ACCABD /* StripeIdentity.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C6592D5EA01E00ACCABD /* StripeIdentity.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6C22D5EE94C00ACCABD /* StripePayments.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65A2D5EA01E00ACCABD /* StripePayments.xcframework */; };
+		E5A3C6C32D5EE94C00ACCABD /* StripePayments.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65A2D5EA01E00ACCABD /* StripePayments.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6C42D5EE94E00ACCABD /* StripePaymentSheet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65B2D5EA01E00ACCABD /* StripePaymentSheet.xcframework */; };
+		E5A3C6C52D5EE94E00ACCABD /* StripePaymentSheet.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65B2D5EA01E00ACCABD /* StripePaymentSheet.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6C62D5EE94F00ACCABD /* StripePaymentsUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65C2D5EA01E00ACCABD /* StripePaymentsUI.xcframework */; };
+		E5A3C6C72D5EE94F00ACCABD /* StripePaymentsUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65C2D5EA01E00ACCABD /* StripePaymentsUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A3C6C82D5EE95000ACCABD /* StripeUICore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65D2D5EA01E00ACCABD /* StripeUICore.xcframework */; };
+		E5A3C6C92D5EE95000ACCABD /* StripeUICore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5A3C65D2D5EA01E00ACCABD /* StripeUICore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5A3C6B32D5EE93F00ACCABD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E5A3C6B92D5EE94600ACCABD /* StripeCameraCore.xcframework in Embed Frameworks */,
+				E5A3C6C32D5EE94C00ACCABD /* StripePayments.xcframework in Embed Frameworks */,
+				E5A3C6BD2D5EE94900ACCABD /* StripeCore.xcframework in Embed Frameworks */,
+				E5A3C6C12D5EE94B00ACCABD /* StripeIdentity.xcframework in Embed Frameworks */,
+				E5A3C6BF2D5EE94A00ACCABD /* StripeFinancialConnections.xcframework in Embed Frameworks */,
+				E5A3C6C92D5EE95000ACCABD /* StripeUICore.xcframework in Embed Frameworks */,
+				E5A3C6C72D5EE94F00ACCABD /* StripePaymentsUI.xcframework in Embed Frameworks */,
+				E5A3C6B52D5EE94400ACCABD /* Stripe3DS2.xcframework in Embed Frameworks */,
+				E5A3C6B22D5EE93F00ACCABD /* Stripe.xcframework in Embed Frameworks */,
+				E5A3C6C52D5EE94E00ACCABD /* StripePaymentSheet.xcframework in Embed Frameworks */,
+				E5A3C6B72D5EE94500ACCABD /* StripeApplePay.xcframework in Embed Frameworks */,
+				E5A3C6BB2D5EE94800ACCABD /* StripeCardScan.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E5A3C6522D5EA01E00ACCABD /* Stripe.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Stripe.xcframework; sourceTree = "<group>"; };
+		E5A3C6532D5EA01E00ACCABD /* Stripe3DS2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Stripe3DS2.xcframework; sourceTree = "<group>"; };
+		E5A3C6542D5EA01E00ACCABD /* StripeApplePay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeApplePay.xcframework; sourceTree = "<group>"; };
+		E5A3C6552D5EA01E00ACCABD /* StripeCameraCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeCameraCore.xcframework; sourceTree = "<group>"; };
+		E5A3C6562D5EA01E00ACCABD /* StripeCardScan.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeCardScan.xcframework; sourceTree = "<group>"; };
+		E5A3C6572D5EA01E00ACCABD /* StripeCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeCore.xcframework; sourceTree = "<group>"; };
+		E5A3C6582D5EA01E00ACCABD /* StripeFinancialConnections.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeFinancialConnections.xcframework; sourceTree = "<group>"; };
+		E5A3C6592D5EA01E00ACCABD /* StripeIdentity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeIdentity.xcframework; sourceTree = "<group>"; };
+		E5A3C65A2D5EA01E00ACCABD /* StripePayments.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripePayments.xcframework; sourceTree = "<group>"; };
+		E5A3C65B2D5EA01E00ACCABD /* StripePaymentSheet.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripePaymentSheet.xcframework; sourceTree = "<group>"; };
+		E5A3C65C2D5EA01E00ACCABD /* StripePaymentsUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripePaymentsUI.xcframework; sourceTree = "<group>"; };
+		E5A3C65D2D5EA01E00ACCABD /* StripeUICore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StripeUICore.xcframework; sourceTree = "<group>"; };
+		E5A3C66A2D5EA07100ACCABD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 		E5B92F8F2D5DBB7C00EF5916 /* StripeIosBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StripeIosBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,16 +101,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A3C6BE2D5EE94A00ACCABD /* StripeFinancialConnections.xcframework in Frameworks */,
+				E5A3C6C22D5EE94C00ACCABD /* StripePayments.xcframework in Frameworks */,
+				E5A3C6BC2D5EE94900ACCABD /* StripeCore.xcframework in Frameworks */,
+				E5A3C6C02D5EE94B00ACCABD /* StripeIdentity.xcframework in Frameworks */,
+				E5A3C6B42D5EE94400ACCABD /* Stripe3DS2.xcframework in Frameworks */,
+				E5A3C6C82D5EE95000ACCABD /* StripeUICore.xcframework in Frameworks */,
+				E5A3C6C62D5EE94F00ACCABD /* StripePaymentsUI.xcframework in Frameworks */,
+				E5A3C6B12D5EE93F00ACCABD /* Stripe.xcframework in Frameworks */,
+				E5A3C6C42D5EE94E00ACCABD /* StripePaymentSheet.xcframework in Frameworks */,
+				E5A3C6BA2D5EE94800ACCABD /* StripeCardScan.xcframework in Frameworks */,
+				E5A3C6B62D5EE94500ACCABD /* StripeApplePay.xcframework in Frameworks */,
+				E5A3C6B82D5EE94600ACCABD /* StripeCameraCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5A3C6412D5E9F7B00ACCABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5A3C66A2D5EA07100ACCABD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E5B92F852D5DBB7C00EF5916 = {
 			isa = PBXGroup;
 			children = (
+				E5A3C6522D5EA01E00ACCABD /* Stripe.xcframework */,
+				E5A3C6532D5EA01E00ACCABD /* Stripe3DS2.xcframework */,
+				E5A3C6542D5EA01E00ACCABD /* StripeApplePay.xcframework */,
+				E5A3C6552D5EA01E00ACCABD /* StripeCameraCore.xcframework */,
+				E5A3C6562D5EA01E00ACCABD /* StripeCardScan.xcframework */,
+				E5A3C6572D5EA01E00ACCABD /* StripeCore.xcframework */,
+				E5A3C6582D5EA01E00ACCABD /* StripeFinancialConnections.xcframework */,
+				E5A3C6592D5EA01E00ACCABD /* StripeIdentity.xcframework */,
+				E5A3C65A2D5EA01E00ACCABD /* StripePayments.xcframework */,
+				E5A3C65B2D5EA01E00ACCABD /* StripePaymentSheet.xcframework */,
+				E5A3C65C2D5EA01E00ACCABD /* StripePaymentsUI.xcframework */,
+				E5A3C65D2D5EA01E00ACCABD /* StripeUICore.xcframework */,
 				E5B92F912D5DBB7C00EF5916 /* StripeIosBridge */,
+				E5A3C6412D5E9F7B00ACCABD /* Frameworks */,
 				E5B92F902D5DBB7C00EF5916 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +177,7 @@
 				E5B92F8B2D5DBB7C00EF5916 /* Sources */,
 				E5B92F8C2D5DBB7C00EF5916 /* Frameworks */,
 				E5B92F8D2D5DBB7C00EF5916 /* Resources */,
+				E5A3C6B32D5EE93F00ACCABD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -105,6 +204,7 @@
 				TargetAttributes = {
 					E5B92F8E2D5DBB7C00EF5916 = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -117,6 +217,8 @@
 			);
 			mainGroup = E5B92F852D5DBB7C00EF5916;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E5B92F902D5DBB7C00EF5916 /* Products */;
 			projectDirPath = "";
@@ -151,6 +253,7 @@
 		E5B92F962D5DBB7C00EF5916 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -160,8 +263,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/StripeIosBridge";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -174,6 +279,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/StripeIosBridge";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -181,6 +289,7 @@
 		E5B92F972D5DBB7C00EF5916 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -190,8 +299,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/StripeIosBridge";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -204,6 +315,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/StripeIosBridge";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -6,3 +6,5 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StripeIosBridge.h"
+#import <StripeIosBridge/StripeIosBridge-Swift.h>
