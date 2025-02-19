@@ -67,3 +67,69 @@ import UIKit
     }
 
 }
+
+class AnotherStupidWrapper : NSObject, STPAuthenticationContext {
+    public func authenticationPresentingViewController() -> UIViewController {
+        return viewController
+    }
+    
+    public var viewController: UIViewController
+    
+    public init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+}
+
+@objc public class BankAccountSetup : NSObject {
+    @objc public func show(
+        viewController: UIViewController,
+        name: String,
+        email: String,
+        clientSecret: String,
+        returnUrl: String,
+        completed: @escaping (String) -> Void,
+        canceled: @escaping () -> Void,
+        failed: @escaping (Error) -> Void
+    ) {
+        let stupidity = AnotherStupidWrapper(viewController: viewController)
+        
+        // Build params
+        let collectParams = STPCollectBankAccountParams.collectUSBankAccountParams(with: name, email: email)
+
+        // Calling this method will display a modal for collecting bank account information
+        let bankAccountCollector = STPBankAccountCollector()
+        bankAccountCollector.collectBankAccountForSetup(clientSecret: clientSecret,
+                                                        returnURL: returnUrl,
+                                                        params: collectParams,
+                                                        from: viewController) { intent, error in
+            guard let intent = intent else {
+                failed(error!)
+                return
+            }
+            if case .requiresPaymentMethod = intent.status {
+                canceled()
+            } else if case .requiresConfirmation = intent.status {
+                // We collected an account - possibly instantly verified, but possibly
+                // manually-entered.
+
+                let setupIntentParams = STPSetupIntentConfirmParams(clientSecret: clientSecret, paymentMethodType: .USBankAccount)
+
+                // Confirm the SetupIntent
+                STPPaymentHandler.shared().confirmSetupIntent(
+                    setupIntentParams, with: stupidity
+                ) { (status, intent, error) in
+                    switch status {
+                    case .failed:
+                        failed(error ?? NSError())
+                    case .canceled:
+                        canceled()
+                    case .succeeded:
+                        completed((intent?.paymentMethod!.stripeId)!)
+                    @unknown default:
+                        fatalError()
+                    }
+                }
+            }
+        }
+    }
+}
